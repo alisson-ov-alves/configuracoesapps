@@ -1,0 +1,17 @@
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[user]
+	name = alisson-alves
+	email = alisson_part@hotmail.com
+[core]
+	longpaths = true
+	editor = code
+[push]
+	followTags = true
+[alias]
+	s = !git status -s
+	c = !git add --all && git commit -m
+	l = !git log --graph --pretty=format:'%C(blue)%h %C(red)%d %C(white)%s - %C(cyan)%cn, %C(green)%cr'
